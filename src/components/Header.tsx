@@ -31,16 +31,16 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-background/80 backdrop-blur-xl shadow-sm border-b border-border' 
+        ? 'bg-black/80 backdrop-blur-xl shadow-2xl border-b border-white/5' 
         : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold">
-            <span className="text-foreground">Abdelrahman</span>
-            <span className="text-primary ml-2">Anany</span>
+          <div className="text-2xl font-bold">
+            <span className="text-white">Abdelrahman</span>
+            <span className="text-yellow-400 ml-2">Anany</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -49,14 +49,15 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-yellow-400 transition-all duration-300 relative group font-medium"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-2 rounded-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 hover:scale-105"
             >
               Hire Me
             </button>
@@ -64,7 +65,7 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground p-2 hover:bg-muted rounded-lg transition-colors"
+            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,19 +74,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-6 border-t border-border bg-background/95 backdrop-blur-xl rounded-xl shadow-lg">
+          <div className="md:hidden mt-4 py-6 border-t border-white/10 bg-black/50 backdrop-blur-xl rounded-2xl">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-3 px-4 text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200 rounded-lg mx-2"
+                className="block w-full text-left py-3 px-4 text-gray-300 hover:text-yellow-400 hover:bg-white/5 transition-all duration-200 rounded-lg mx-2"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="w-full mt-4 mx-2 bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200"
+              className="w-full mt-4 mx-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300"
             >
               Hire Me
             </button>
