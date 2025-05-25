@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 bg-slate-800/50">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-800 via-gray-850 to-gray-900">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl font-bold text-center mb-12 text-yellow-400">
           About Me
@@ -25,11 +25,11 @@ const About = () => {
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="text-center p-4 bg-slate-700/50 rounded-lg">
+              <div className="text-center p-4 bg-gray-700/30 rounded-lg backdrop-blur-sm">
                 <div className="text-2xl font-bold text-yellow-400">3+</div>
                 <div className="text-slate-300">Years Experience</div>
               </div>
-              <div className="text-center p-4 bg-slate-700/50 rounded-lg">
+              <div className="text-center p-4 bg-gray-700/30 rounded-lg backdrop-blur-sm">
                 <div className="text-2xl font-bold text-yellow-400">10+</div>
                 <div className="text-slate-300">Projects Completed</div>
               </div>
@@ -38,7 +38,7 @@ const About = () => {
           
           <div className="flex justify-center">
             <div className="w-80 h-80 bg-gradient-to-br from-yellow-400 to-blue-500 rounded-full flex items-center justify-center">
-              <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center">
+              <div className="w-72 h-72 bg-gray-800 rounded-full flex items-center justify-center">
                 <div className="text-6xl">👨‍💻</div>
               </div>
             </div>

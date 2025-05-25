@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, Send } from 'lucide-react';
+import { Mail, MessageCircle, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -70,14 +70,16 @@ const Contact = () => {
               </a>
               
               <a
-                href="tel:+201118836732"
+                href="https://wa.me/201118836732"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-300 hover:text-yellow-400 transition-colors duration-200 group"
               >
                 <div className="w-14 h-14 bg-yellow-400/10 rounded-xl flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors duration-200">
-                  <Phone size={24} className="text-yellow-400" />
+                  <MessageCircle size={24} className="text-yellow-400" />
                 </div>
                 <div>
-                  <div className="font-semibold text-white">Phone</div>
+                  <div className="font-semibold text-white">WhatsApp</div>
                   <div className="text-gray-400">+20 1118836732</div>
                 </div>
               </a>
@@ -138,7 +140,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gray-900 hover:bg-black text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-gray-700 hover:border-gray-600 flex items-center justify-center gap-2"
+                className="w-full bg-black hover:bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-gray-700 hover:border-gray-600 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   'Sending...'
